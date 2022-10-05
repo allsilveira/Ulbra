@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@300&display=swap');
+
+*{
+    font-family: 'Gantari', sans-serif;
+}
+
+header{
+    background-color: black;
+    margin-top: 0px;
+}
+
+footer{
+    background-color: black;
+}
+.tabela{
+    background-image: url("https://emarketing.nyc3.cdn.digitaloceanspaces.com/suprema_im__veis/5d02a32d4de64crepe.jpeg");
+    background-repeat: no-repeat;
+}
+table{
+    background-color: rgba(0, 0, 0, 0.678);
+}
+p{
+    font-size: 18px;
+}
+

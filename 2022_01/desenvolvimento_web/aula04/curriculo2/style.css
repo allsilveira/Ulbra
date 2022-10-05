@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+div#tudo{
+    margin: auto 20% auto 20%;
+    text-align: center;
+    background-color: rgb(107, 143, 175);
+}
+
+div#perfil{
+    float: left;
+    width: 70%;
+}
+
+img#foto{
+    width: 25%;
+}
+
+div#info{
+    text-align: justify;
+}
+
+div.texto{
+    text-align: justify;
+    margin: auto 20px auto 20px;
+}

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+section#interface {
+    background-color: rgba(252, 150, 132, 0.5);
+    margin: -20px 35px -50px 35px;
+    box-shadow: 0px 0px 8px rgb(88, 87, 87);
+    padding: 10px 10px 10px 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+p{
+    text-align: justify;
+    text-indent: 50px;
+    
+}
+body{
+    background-color:rgba(252, 150, 132, 0.5);
+
+}
+
+img#foto {
+    position: absolute;
+    left: 950px;
+    top: 45px;
+    border: 8px solid rgb(241, 214, 208); 
+    box-shadow: 0px 0px 8px rgb(88, 87, 87);
+    float: left;
+
+}
+
+section#interface div#links{
+    position: absolute;
+    left: 1020px;
+    top: 410px;
+}
+
+section#interface a.redes{
+    padding: 5px;
+}
+
+section#interface h1#nome{
+    padding-top: 30px;
+    padding-left: 100px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    
+}
+
+section#interface div.conteudo{
+    text-align: justify;
+    text-indent: 50px;
+    padding: auto 800px auto 20px;
+}
+
+footer#rodape{
+    text-align: center;
+}
