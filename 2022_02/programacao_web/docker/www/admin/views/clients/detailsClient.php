@@ -8,7 +8,7 @@
   <tbody>
     <tr>
       <td>
-        <strong>ID:</strong> <?= $line['id_client'] ?>
+        <strong>ID:</strong> <?= $line['idClient'] ?>
       </td>
     </tr>
     <tr>

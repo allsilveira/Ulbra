@@ -24,11 +24,11 @@ class ClientController
     require_once('views/templates/footer.php');
   }
 
-  public function detailsClient($id_client)
+  public function detailsClient($idClient)
   {
-    $result = $this->ClientModel->consultClient($id_client);
+    $result = $this->ClientModel->consultClient($idClient);
 
-    if ($line = $result->fetch_assoc()) {
+    if($line = $result->fetch_assoc()) {
       require_once('views/templates/header.php');
       require_once('views/clients/detailsClient.php');
       require_once('views/templates/footer.php');
@@ -56,21 +56,21 @@ class ClientController
     header('Location:?controller=client&action=listClients');
   }
 
-  public function updateClient($id_client)
+  public function updateClient($idClient)
   {
-    $result = $this->ClientModel->consultClient($id_client);
+    $result = $this->ClientModel->consultClient($idClient);
 
-    if ($line = $result->fetch_assoc()) {
+    if($line = $result->fetch_assoc()) {
       require_once('views/templates/header.php');
       require_once('views/clients/updateClient.php');
       require_once('views/templates/footer.php');
     }
   }
 
-  public function updateClientAction($id_client)
+  public function updateClientAction($idClient)
   {
     $arrayClient = [
-      'id_client' => $id_client,
+      'idClient' => $idClient,
       'name' => $_POST['name'],
       'email' => $_POST['email'],
       'phone' => $_POST['phone'],
@@ -79,12 +79,12 @@ class ClientController
 
     $this->ClientModel->updateClient($arrayClient);
 
-    header('Location:?controller=client&action=listClients');
+    header('Location:?controller=client&action=listClients'); 
   }
 
-  public function deleteClient($id_client)
+  public function deleteClient($idClient)
   {
-    $this->ClientModel->deleteClient($id_client);
+    $this->ClientModel->deleteClient($idClient);
 
     header('Location:?controller=client&action=listClients');
   }

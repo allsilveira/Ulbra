@@ -15,7 +15,7 @@
   ?>
     <tr>
       <td>
-        <?= $client['id_client'] ?>
+        <?= $client['idClient'] ?>
       </td>
       <td>
         <?= $client['name'] ?>
@@ -30,13 +30,13 @@
         <?= $client['address'] ?>
       </td>
       <td>
-        <a class="btn btn-small btn-primary" href="?controller=client&action=detailsClient&id=<?= $client['id_client'] ?>">Detalhes</a>
+        <a class="btn btn-small btn-primary" href="?controller=client&action=detailsClient&id=<?= $client['idClient'] ?>">Detalhes</a>
       </td>
       <td>
-        <a class="btn btn-small btn-secondary" href="?controller=client&action=updateClient&id=<?= $client['id_client'] ?>">Editar</a>
+        <a class="btn btn-small btn-secondary" href="?controller=client&action=updateClient&id=<?= $client['idClient'] ?>">Editar</a>
       </td>
       <td>
-        <a class="btn btn-small btn-danger" href="?controller=client&action=deleteClient&id=<?= $client['id_client'] ?>">Excluir</a>
+        <a class="btn btn-small btn-danger" href="?controller=client&action=deleteClient&id=<?= $client['idClient'] ?>">Excluir</a>
       </td>
     </tr>
   <?php

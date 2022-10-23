@@ -17,9 +17,9 @@ class ClientModel
     return $this->connection->query($sql);
   }
 
-  public function consultClient($id_client)
+  public function consultClient($idClient)
   {
-    $sql = "SELECT * FROM clients WHERE id_client = $id_client";
+    $sql = "SELECT * FROM clients WHERE idClient = $idClient";
     return $this->connection->query($sql);
   }
 
@@ -39,14 +39,14 @@ class ClientModel
         phone = '{$arrayClient['phone']}',
         address = '{$arrayClient['address']}'
       WHERE
-        id_client = {$arrayClient['id_client']}";
+        idClient = '{$arrayClient['idClient']}'";
 
     return $this->connection->query($sql);
   }
 
-  public function deleteClient($id_client)
+  public function deleteClient($idClient)
   {
-    $sql = "DELETE FROM clients WHERE id_client = $id_client";
+    $sql = "DELETE FROM clients WHERE idClient = $idClient";
     return $this->connection->query($sql);
   }
 }

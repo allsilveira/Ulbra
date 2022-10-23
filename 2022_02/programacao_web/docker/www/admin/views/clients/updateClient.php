@@ -1,4 +1,4 @@
-<form action="?controller=client&action=updateClientAction&id=<?= $line['id_client'] ?>" method="post" class="container-fluid col-6 m-3 mt-5">
+<form action="?controller=client&action=updateClientAction&id=<?= $line['idClient'] ?>" method="post" class="container-fluid col-6 m-3 mt-5">
   <legend>Novo usuário:</legend>
   <fieldset>
     <div class="pb-3">
