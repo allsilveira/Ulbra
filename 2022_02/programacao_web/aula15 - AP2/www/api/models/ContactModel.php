@@ -21,6 +21,7 @@ class ContactModel
       )";
     return $this->connection->query($sql);
   }
+
   public function listContacts()
   {
     $sql = "SELECT * FROM contacts";
