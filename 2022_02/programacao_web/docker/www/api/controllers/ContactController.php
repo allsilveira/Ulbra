@@ -12,7 +12,6 @@ class ContactController
 
   public function insertContact()
   {
-    var_dump($_POST);
     $contact = json_decode(file_get_contents("php://input"));
     $arrayContact = (array) $contact;
     $this->ContactModel->insertContact($arrayContact);
