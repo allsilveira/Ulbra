@@ -41,6 +41,10 @@ $routes->get('/about', 'Site::view/about');
 $routes->get('/product', 'Site::view/product');
 $routes->get('/contact', 'Site::view/contact');
 
+$routes->get('/listClients', 'Client::listClients');
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
