@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "a8425708-64eb-4e46-ac36-473f53d6ea8a",
+		"name": "Eng. de Software",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23639374"
+	},
+	"item": [
+		{
+			"name": "getMetods",
+			"item": [
+				{
+					"name": "getRandomActivity",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.boredapi.com/api/activity/",
+							"protocol": "https",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"activity",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActivity",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api/activity?key=5881028",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "5881028"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActivityForType",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Type activity is education\", () => {\r",
+									"    const jsonResponse = pm.response.json();\r",
+									"    pm.expect(jsonResponse.type).to.eql(\"education\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api/activity?type=education",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "education"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActivityForParticipantsNumber",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api/activity?participants=1",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "participants",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActivityForPrice",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api/activity?price=0.0",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "0.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActivityForPriceRange",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api/activity?minprice=0&maxprice=0.1",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "minprice",
+									"value": "0"
+								},
+								{
+									"key": "maxprice",
+									"value": "0.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPriceForSpecificRange",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api/activity?accessibility=1",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "accessibility",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getRestrictEventForRange",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.1",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "minaccessibility",
+									"value": "0"
+								},
+								{
+									"key": "maxaccessibility",
+									"value": "0.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "baseUrl",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api/",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "automaticTests",
+			"item": [
+				{
+					"name": "teste de saude da requisicao",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"O código de retorno deve ser 200 OK\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.boredapi.com/api",
+							"protocol": "http",
+							"host": [
+								"www",
+								"boredapi",
+								"com"
+							],
+							"path": [
+								"api"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
