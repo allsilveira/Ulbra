@@ -79,12 +79,8 @@ INSERT INTO livros(titulo, preco, lancamento, id_assunto, id_editora) VALUES
     ('Banco de Dados Distribuídos', 31.20, '1999-01-10','B', 1),
     ('Banco de Dados Distribuído', 31.20, '1999-01-10','B', 1);
 
+
 -- 3 – Crie comandos SQLs que retorne os dados solicitados abaixo.
-
--- a) Monte um comando para excluir da tabela livros aqueles que possuem o código maior ou igual a 2, que possuem o preço maior que R$ 50,00 e que já foram lançados.
-DELETE FROM livros WHERE id >= 2 AND preco > 50 AND lancamento < '2022-11-19';
-
--- b) Escreva o comando que seleciona as colunas NOME, CPF e ENDERECO, da tabela AUTOR, para aqueles que possuem a palavra ‘joão’ no nome.
 INSERT INTO autores(nome, cpf, data_nascimento, nacionalidade) VALUES 
     ('João Cassio Costa', '12345678910', '1983-05-18', 'Brasileiro'),
     ('Alessandra Silveira', '04435480050', '2003-03-22', 'Brasileiro'),
@@ -92,63 +88,80 @@ INSERT INTO autores(nome, cpf, data_nascimento, nacionalidade) VALUES
     ('Ramon Lumertz', '10987654321', '1981-12-12', 'Brasileiro'),
     ('Maria Elena Schutt Da Silveira', '15975345610', '1963-04-09', 'Brasileiro');
 
+INSERT INTO autores(nome, cpf, data_nascimento, endereco, nacionalidade) VALUES 
+    ('Carioca da Gema', '12345678920', '2022-11-19', 'Rio De Janeiro', 'Brasileiro');
+
+-- a) Monte um comando para excluir da tabela livros aqueles que possuem o código maior ou igual a 2, que possuem o preço maior que R$ 50,00 e que já foram lançados.
+DELETE FROM livros WHERE id >= 2 AND preco > 50 AND lancamento < CURRENT_DATE;
+
+-- b) Escreva o comando que seleciona as colunas NOME, CPF e ENDERECO, da tabela AUTOR, para aqueles que possuem a palavra ‘joão’ no nome.
 SELECT nome, cpf, endereco FROM autores WHERE nome LIKE '%João%';
 
 -- c) Excluir o livro cujo título é ‘BANCO DE DADOS DISTRIBUÍDO’ ou ‘BANCOS DE DADOS DISTRIBUÍDOS’. Somente essas duas opções devem ser consideradas.
-DELETE FROM livros WHERE titulo LIKE 'Banco de Dados Distribuído%';
+DELETE FROM livros WHERE titulo LIKE 'Banco_ de Dado_ Distribuído_';
 
 -- d) Selecione o nome e o CPF de todos os autores que nasceram após 01 de janeiro de 1990.
 SELECT nome, cpf FROM autores WHERE data_nascimento > '1990-01-01';
 
 -- e) Selecione a matrícula e o nome dos autores que possuem RIO DE JANEIRO no seu endereço.
-INSERT INTO autores(nome, cpf, data_nascimento, endereco, nacionalidade) VALUES 
-    ('Carioca da Gema', '12345678920', '2022-11-19', 'Rio De Janeiro', 'Brasileiro');
-
 SELECT matricula, nome FROM autores WHERE endereco LIKE '%Rio De Janeiro%';
 
 -- f) Atualize para zero o preço de todos os livros onde a data de lançamento for nula ou onde seu preço atual for inferior a R$ 55,00.
 UPDATE livros SET preco = 0 WHERE lancamento IS NULL OR preco < 55;
 
 -- g) Exclua todos os livros onde o assunto for diferente de ‘S’, ‘P’, ou ‘B’.
-DELETE FROM livros WHERE id_assunto != 'S' AND id_assunto != 'P' AND id_assunto != 'B';
+DELETE FROM livros WHERE id_assunto NOT IN('S', 'P', 'B');
 
 -- h) Escreva o comando para contar quantos são os autores cadastrados na tabela AUTORES.
 SELECT COUNT(matricula) AS total_de_autores_cadastrados FROM autores;
 
 -- i) Escreva o comando que apresenta qual o número médio de autores de cada livro. Você deve utilizar, novamente, a tabela AUTOR_LIVRO. 
+SELECT avg(quantos) FROM (
+    SELECT id_livro, COUNT(matricula_autores) AS quantos
+    FROM autores_livros    
+    GROUP BY id_livro
+) AS minha_tabela;
 
 -- j) Apresente o comando SQL para gerar uma listagem dos códigos dos livros que possuem a menos dois autores.
+SELECT id_livro, COUNT(matricula_autores) AS quantos
+FROM autores_livros
+GROUP BY id_livro
+HAVING quantos >= 2;
+
 
 -- k) Escreva o comando para apresentar o preço médio dos livros por código de editora. Considere somente aqueles que custam mais de R$ 45,00.
+
 
 -- l) Apresente o preço máximo, o preço mínimo e o preço médio dos livros cujos assuntos são ‘S’ ou ‘P’ ou ‘B’, para cada código de editora.
 
 -- m) Altere o comando do exercício anterior para só considerar os livros que já foram lançados (data de lançamento inferior a data atual) e cujo o preço máximo é inferior a R$ 100,00.
 
-
 -- 4 - Nos exercícios com junções de tabelas, utilize JOINS.
 
 --a) Estão sendo estudados aumentos nos preços dos livros. Escreva o comando SQL que retorna uma listagem contendo o titulo dos livros, e mais três colunas: uma contendo os preços dos livros acrescidos de 10% (deve ser chamada de ‘Opção_1’), a segunda contendo os preços acrescidos de 15% (deve ser chamada de ‘Opção_2’) e a terceira contendo os preços dos livros acrescidos de 20% (deve ser chamada de ‘Opção_3’). Somente devem ser considerados livros que já tenham sido lançados.
 
-SELECT titulo, preco, preco*1.10 AS opcao1, preco*1.15 AS opcao2, preco*1.20 AS opcao3 FROM livros WHERE lancamentos > '0000-00-00';
+SELECT titulo, preco, SUM(preco + preco * 1.10) AS opcao1, SUM(preco + preco * 1.15) AS opcao2, SUM(preco + preco * 1.20) AS opcao3
+FROM livros 
+WHERE lancamento > '0000-00-00';
 
 --b) Escreva o comando SQL que apresenta uma listagem contendo o código da editora, o nome da editora, a sigla do assunto e o titulo dos livros que já foram lançados. Os dados devem estar em ordem decrescente de preço, e ascendente de código da editora e de título do livro.
 
 SELECT id_editora, id_assunto, titulo, nome
 FROM livros, editoras
-    inner join editoras
-        on editoras.id = livros.id_editora
-    inner join assuntos
-        on assuntos.id = livros.id_assunto
-    inner join autores_livros
-        on livros.id = autores_livros.id_livro
+    INNER JOIN editoras
+        ON editoras.id = livros.id_editora
+    INNER JOIN assuntos
+        ON assuntos.id = livros.id_assunto
+    INNER JOIN autores_livros
+        ON livros.id = autores_livros.id_livro
  WHERE lancamento < 2022-11-23
  ORDER BY id_editora ASC
 
  -- c) Escreva o comando que apresente uma listagem dos nomes dos autores e do seu ano e mês de nascimento, para os autores brasileiros e que tem livros ainda não lançados. A listagem deve estar ordenada em ordem crescente de nome.
 
-SELECT nome, data_nascimento, nascionalidade, lancamento FROM autores, livros WHERE nacionalidade LIKE %Brasileiro% AND lancamento = NULL
-ORDER BY nome ASC;
-
-
-
+SELECT nome, data_nascimento, lancamento
+FROM autores, autores_livros
+    INNER JOIN autores, autores_livros
+        ON autores.matricula = autores_livros.matricula_autores
+WHERE lancamento < '2022-11-23'
+ORDER BY nome DESC;
