@@ -16,12 +16,12 @@ public class Main {
 
     public static void printWithIfElse(int x) {
         do {
-            System.out.println(x);
             if (x % 2 == 0) {
                 x += 5;
             } else {
                 x *= 2;
             }
+            System.out.println(x);
         }
         while (x <= 1000);
 
@@ -29,7 +29,6 @@ public class Main {
 
     public static void printWithSwitch(int x) {
         while (x <= 1000) {
-            System.out.println(x);
             switch (x % 2) {
                 case 0:
                     x += 5;
@@ -39,6 +38,7 @@ public class Main {
                     x *= 2;
                     break;
             }
+            System.out.println(x);
         }
     }
 }
