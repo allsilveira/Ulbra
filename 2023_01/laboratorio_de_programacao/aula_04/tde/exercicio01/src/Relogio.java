@@ -14,11 +14,13 @@ public class Relogio {
             return "segundo inválido";
         }
 
-        if (minute == 12 || second == 12) {
+        if (minute == 12) {
             minute = 00;
-            second = 00;
-
             this.pointerMinute.position = minute;
+        }
+
+        if (second == 12) {
+            second = 0;
             this.pointerSecond.position = second;
         }
 

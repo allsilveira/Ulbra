@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="031fe79e-45e2-4ea0-8f3c-4ab41058aa32" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../aula_03_exercicios_reforco/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula_03_exercicios_reforco/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="031fe79e-45e2-4ea0-8f3c-4ab41058aa32" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,13 +18,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NVf0yhxJm7bQbfF2gH3RxgeuDv" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -39,11 +37,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Ygor/Documents/Repositorios/Ulbra/terceiro_semestre/laboratorio-de-programacao/aula04-tde/exercicio02",
+    "last_opened_file_path": "C:/Users/Alessandra/Documents/repositorios/Ulbra/2023_01/laboratorio_de_programacao/aula_04/tde/exercicio01",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -58,6 +57,9 @@
       <workItem from="1679753955308" duration="3180000" />
       <workItem from="1679757176413" duration="136000" />
       <workItem from="1679763928466" duration="92000" />
+      <workItem from="1679953500615" duration="237000" />
+      <workItem from="1679953753964" duration="75000" />
+      <workItem from="1679953843782" duration="62000" />
     </task>
     <servers />
   </component>
