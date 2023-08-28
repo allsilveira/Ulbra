@@ -1,2 +1,6 @@
-public class CheckingAccount extends Account{
+package Account;
+
+import Account.Account;
+
+public class CheckingAccount extends Account {
 }
