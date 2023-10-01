@@ -1,7 +1,5 @@
 package Operators;
 
-import Account.Account;
-
 import java.util.ArrayList;
 
 public class Deposit implements Operator {

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/calculadora-v2/calculadora-v2.iml" filepath="$PROJECT_DIR$/calculadora-v2/calculadora-v2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/programacao_orientada_a_objetos.iml" filepath="$PROJECT_DIR$/.idea/programacao_orientada_a_objetos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/semipresencial-aula-05/semipresencial-aula05-ex01/semipresencial-aula05-ex01.iml" filepath="$PROJECT_DIR$/semipresencial-aula-05/semipresencial-aula05-ex01/semipresencial-aula05-ex01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/semipresencial-aula-05/semipresencial-aula05-ex02/semipresencial-aula05-ex02.iml" filepath="$PROJECT_DIR$/semipresencial-aula-05/semipresencial-aula05-ex02/semipresencial-aula05-ex02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/semipresencial-aula-05/semipresencial-aula05-ex03/semipresencial-aula05-ex03.iml" filepath="$PROJECT_DIR$/semipresencial-aula-05/semipresencial-aula05-ex03/semipresencial-aula05-ex03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tde-aula-01/tde-aula-01.iml" filepath="$PROJECT_DIR$/tde-aula-01/tde-aula-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tde-aula-02-crud-usuarios/tde-aula-02-crud-usuarios.iml" filepath="$PROJECT_DIR$/tde-aula-02-crud-usuarios/tde-aula-02-crud-usuarios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tde-aula-03-calculadora/tde-aula-03-calculadora.iml" filepath="$PROJECT_DIR$/tde-aula-03-calculadora/tde-aula-03-calculadora.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tde-aula-04/tde-aula-04.iml" filepath="$PROJECT_DIR$/tde-aula-04/tde-aula-04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tde-aula-06/tde-aula-06.iml" filepath="$PROJECT_DIR$/tde-aula-06/tde-aula-06.iml" />
+    </modules>
+  </component>
+</project>
