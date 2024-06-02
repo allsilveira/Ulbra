@@ -1,6 +1,5 @@
 package com.example.myapp_aula09
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -17,13 +16,8 @@ class ProductDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_product_detail)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
-        val productBundle = intent.getSerializableExtra("data") as? Product
+        val productBundle = intent.extras?.getSerializable("data") as? Product
 
         val image = findViewById<ImageView>(R.id.productImg)
         val name = findViewById<TextView>(R.id.tvProductName)

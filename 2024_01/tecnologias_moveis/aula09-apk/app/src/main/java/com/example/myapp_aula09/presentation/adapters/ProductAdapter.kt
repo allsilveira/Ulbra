@@ -11,10 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapp_aula09.data.models.Product
 import com.example.myapp_aula09.R
+import com.example.myapp_aula09.databinding.ProductItemBinding
 
 class ProductAdapter(
     private val products: MutableList<Product>,
-    private val goToDetails: (item: Product) -> Unit
+    private val goToDetails: (item: Product) -> Unit,
+    private val removeProduct: ( product: Product ) -> Unit
     ) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
     private lateinit var context: Context
@@ -37,6 +39,10 @@ class ProductAdapter(
         holder.itemView.rootView.setOnLongClickListener {
             showPopupMenu(holder.itemView, position)
             true
+        }
+
+        holder.itemView.rootView.setOnClickListener {
+            goToDetails(products[position])
         }
 
         holder.productName.text = products[position].name

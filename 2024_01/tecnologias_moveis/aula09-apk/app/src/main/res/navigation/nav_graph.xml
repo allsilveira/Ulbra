@@ -9,5 +9,27 @@
         android:id="@+id/homeFragment"
         android:name="com.example.myapp_aula09.presentation.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailActivity"
+            app:destination="@id/productDetailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.myapp_aula09.presentation.fragments.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/productDetailActivity"
+        android:name="com.example.myapp_aula09.ProductDetailActivity"
+        android:label="activity_product_detail"
+        tools:layout="@layout/activity_product_detail" />
+
 </navigation>
