@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapp_aula09.data.models.Product
 import com.example.myapp_aula09.R
-import com.example.myapp_aula09.databinding.ProductItemBinding
 
 class ProductAdapter(
     private val products: MutableList<Product>,
@@ -31,6 +30,7 @@ class ProductAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(holder.itemView.context).load(products[position].urlImage).centerCrop()
             .into(holder.productImage)
+
 
         holder.itemView.rootView.setOnClickListener {
             goToDetails(products[position])
