@@ -8,13 +8,11 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.RecyclerView
 import com.example.myapp_aula09.R
 import com.example.myapp_aula09.data.models.Product
 import com.example.myapp_aula09.databinding.FragmentHomeBinding
 import com.example.myapp_aula09.presentation.adapters.ProductAdapter
 import com.example.myapp_aula09.presentation.viewmodels.MainViewModel
-
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
