@@ -1,11 +1,20 @@
+import org.jetbrains.kotlin.backend.wasm.ir2wasm.bind
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
 }
 
 android {
     namespace = "com.example.myapp_aula09"
     compileSdk = 34
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+
+    }
 
     defaultConfig {
         applicationId = "com.example.myapp_aula09"
@@ -38,8 +47,9 @@ android {
 dependencies {
 
     // Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+    implementation("androidx.navigation:navigation-fragment:2.7.6")
 
     //ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
