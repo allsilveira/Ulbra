@@ -1,5 +1,3 @@
-import java.lang.StackWalker.Option;
-
 public class Matriz {
     private int[][] integers;
     private int matrizSize;
