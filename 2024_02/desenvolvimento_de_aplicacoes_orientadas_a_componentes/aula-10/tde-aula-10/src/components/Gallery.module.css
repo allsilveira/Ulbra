@@ -1,0 +1,8 @@
+.title {
+    text-align: left;
+}
+
+.images {
+    display: flex;
+    gap: 25px;
+}
