@@ -1,0 +1,24 @@
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+}
+
+.menuContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu {
+    flex-direction: row;
+    padding: 10px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+}
