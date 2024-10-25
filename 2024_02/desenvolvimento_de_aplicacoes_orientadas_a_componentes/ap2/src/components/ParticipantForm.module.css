@@ -1,0 +1,58 @@
+form {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.596);
+    backdrop-filter: blur(10px);
+    color: black;
+
+    padding: 20px;
+    width: 300px;
+}
+
+form div {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px
+}
+
+.formGroup {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input {
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="tel"],
+.formGroup input[type="url"] {
+    width: 100%;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+button {
+    background-color: #05537d;
+    color: #fff;
+    padding: 8px;
+    width: 100%;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    cursor: pointer;
+}
