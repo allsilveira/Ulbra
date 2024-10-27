@@ -9,3 +9,7 @@ body {
   color: rgba(255, 255, 255, 0.87);
   background-image: linear-gradient(to right, #85a3b9 0, #065f86 50%, #002356 100%);
 }
+
+ul li {
+  list-style: none;
+}
