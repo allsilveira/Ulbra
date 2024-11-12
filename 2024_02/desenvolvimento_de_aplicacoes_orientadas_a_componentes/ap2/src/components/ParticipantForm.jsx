@@ -47,7 +47,6 @@ export function ParticipantForm(props) {
                 <div>
                     <label>
                         <input 
-                            defaultChecked
                             type="radio" 
                             name="guest" 
                             value="true" 
@@ -71,7 +70,6 @@ export function ParticipantForm(props) {
                 <div>
                     <label>
                         <input 
-                            defaultChecked
                             type="radio" 
                             name="paid" 
                             value="true" 
